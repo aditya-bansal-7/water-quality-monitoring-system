@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Replit</title>
+  <link href="home.css" rel="stylesheet" type="text/css" />
+</head>
+  
+
+<body>
+  <nav>
+      <a onclick="scrollToAbout()">About Project</a>
+      <a onclick="scrollToParameters()">Readings</a>
+      <a onclick="scrollTomonitoringsystem()">Circuit diagram</a>
+      <a onclick="scrollTocomponents()">Components</a>
+      <a onclick="scrollTocontact()">Contact Us</a>
+  </nav>
+  
+  <header>
+      <h1>Water Quality Monitoring System</h1>
+      <p>Ensure safe and clean water with our monitoring system.</p>
+      <button onclick="scrollToAbout()">Get Started</button>
+      <!-- <img src="water-icon.png" alt="Water Icon"> -->
+  </header>
+
+  <section id="about">
+      <h2>ABOUT PROJECT</h2>
+      <p><b>Drinking Water Quality Monitoring System</b> with ESP32 WiFi Module, TDS/EC Sensor & Temperature Sensor. This complete system can be used to monitor the drinking water quality, i.e Water Electrical Conductivity or EC & Water Temperature. The EC & temperature value can be monitored online from any part of the world on an IoT Server called Thingspeak.<br><br>
+        This project uses a TDS Sensor and DS18B20 waterproof temperature sensor along with ESP32 WiFi Module to measure water quality monitoring parameters like Electrical Conductivity & temperature. The EC & Temperature value will be displayed on a 0.96″ I2C OLED Display.</p>
+  </section>
+
+  <section id="parameters">
+
+      <h2>Water Quality Readings</h2>
+      <div id="latest-values" style="font-size: 2rem;">
+          <p id="temperature">Temperature: Loading...</p>
+          <!-- <iframe width="450" height="260"  src="https://thingspeak.com/channels/2388915/widgets/786679"></iframe> -->
+          <p id="water-quality">Water Quality: Loading...</p>
+          <!-- <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2388915/widgets/786682"></iframe> -->
+      </div>
+      <div class="read-box">
+        <div>
+          <h4>Temperature Reading </h4>
+          <a><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2388915/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></a>
+        </div>
+        <div>
+          <h4>TDS Sensor</h4>
+          <a><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2388915/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe></a>
+        </div>
+      </div>
+  </section>
+
+  <section id="monitoring-system" class="system">
+      <div class="sys-text">
+        <h2>Circuit Diagram</h2>
+        <p>This project uses a <b>TDS Sensor</b> and <b>DS18B20 waterproof temperature sensor</b> along with <b>ESP32 WiFi Module</b> to measure water quality monitoring parameters like Electrical Conductivity & temperature. The EC & Temperature value will be displayed on a 0.96″ <b>I2C OLED Display</b>.</p>
+      </div>
+      <img src="resource/circuitdiagram.jpg" alt="Water Quality Monitoring System Circuit" class="responsive-img">
+  </section>
+
+  <!-- <section id="data-analysis">
+      <h2>Data Analysis</h2>
+      <p>Get insights from the data we've collected and learn about our analysis findings.</p>
+  </section> -->
+  
+  <section id="components">
+      <h2>Components Used</h2>
+      
+
+      <div class="box-section">
+          <div class="box">
+              <div class="box-content">
+                  <h3>Analog TDS Sensor</h3>
+                  <div class="box-img" style="background-image: url('resource/Analog-TDS-Sensor-479x360.jpg');"></div>
+                  <p class="hidden-info p1 " >The Analog TDS Sensor is an Arduino-compatible TDS sensor/Meter Kit for measuring TDS value of the water. It can be applied to domestic water, hydroponic and other fields of water quality testing. This product supports 3.3 ~ 5.5V wide voltage input, and 0 ~ 2.3V analog voltage output, which makes it compatible with 5V or 3.3V control systems or boards.</p>
+              </div>
+          </div>
+          <div class="box">
+          <div class="box-content">
+              <h3>Temperature Sensor</h3>
+              <div class="box-img" style="background-image: url('resource/waterproof-temperature-sensor-ds18b20-300x249.jpg');"></div>
+              <p class="hidden-info p2"> This is a pre-wired and waterproofed version of the DS18B20 Sensor used to measure something far away, or in wet conditions. The Sensor can measure the temperature between -55 to 125°C (-67°F to +257°F). The cable is jacketed in PVC. These 1-wire digital temperature sensors are fairly precise, i.e ±0.5°C over much of the range </p>
+          </div></div>
+          <div class="box">
+              <div class="box-content">
+                  <h3>ESP32 WiFi Module</h3>
+                  <div class="box-img" style="background-image: url('resource/esp32-wroom-wifi-devkit.1.jpg');"></div>
+                  <p class="hidden-info p1">The ESP32 is a series of low-cost and low-power System on a Chip (SoC) microcontrollers developed by Espressif that include Wi-Fi and Bluetooth wireless capabilities and dual-core processor. If you’re familiar with the ESP8266, the ESP32 is its successor, loaded with lots of new features.</p>
+              </div>
+          </div>
+          <div class="box">
+              <div class="box-content">
+                  <h3>OLED Display</h3>
+                  <div class="box-img" style="background-image: url('resource/oled\ display.webp');"></div>
+                  <p class="hidden-info p2">OLED, which stands for Organic Light Emitting Diode, is a relatively new type of display for televisions, smartphones, and computer monitors.</p>
+              </div>
+          </div>
+      </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Fill out the form below to get in touch with us. We are here to help and answer any questions you may have about our water services.</p>
+    <h3>Name</h3>
+    <input type="text" id="nameInput" placeholder="Abc">
+    <h3>E-mail</h3>
+    <input type="text" id="emailInput" placeholder="xyz@gmail.com">
+    <h3>Message</h3>
+    <div class="msg-input">
+      <textarea id="messageInput" placeholder="Type your message here..."></textarea>
+    </div>
+    <p>This site is protected by reCAPTCHA and the Google <b>Privacy Policy</b> and <b>Terms of Service</b> apply</p>
+    <div class="send-btn">
+      <button onclick="save_data()">Send</button>
+      <p><span id="send-msg"></span></p>
+    </div>
+  </section>
+
+
+  <footer>
+      <p>&copy; 2024 Water Quality Monitoring System. All rights reserved.<br>This website only for fun purpose . If it hurts you than go and sleep in your mumma's lap</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  
+  <!-- <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script> -->
+</body>
+
+</html>
